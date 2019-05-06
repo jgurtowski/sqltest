@@ -17,7 +17,7 @@ def get_db():
 @app.route('/frequent_browsers')
 def freq_browsers():
     cursor = get_db().cursor()
-    data = cursor.execute("select * from frequent_browsers limit 10;")
+    data = cursor.execute("select people.first_name,people.last_name,fb.num_sites_visited from frequent_browsers as fb inner join people on people.id=fb.person_id limit 10;")
     headers = list(map(lambda x: x[0], cursor.description))
     dict_data = map(lambda x: dict(zip(headers,x)), data)
     return jsonify(list(dict_data))
