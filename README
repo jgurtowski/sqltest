@@ -1,0 +1,32 @@
+###
+# Update Database with most the frequent browsers
+###
+
+Make sure sqlite3 is installed
+
+At the command prompt:
+>bash update_frequent_browsers.sh
+
+
+#####
+#Launch API
+####
+
+>python3 -m virtualenv test_env
+
+>source test_env/bin/activate
+
+>pip3 install -r python_requirements.txt
+
+>python3 frequent_browser_api.py
+
+
+
+
+
+
+
+
+
+*Note:Typically we would not store a database (testdb.db) in version control,
+however we have done so here for convenience.
