@@ -21,10 +21,8 @@ At the command prompt:
 >python3 frequent_browser_api.py
 
 
-
-
-
-
+visit in your browser:
+http://127.0.0.1:5000/frequent_browsers
 
 
 
